@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'calcular',
+    loadChildren: () => import('./calcular/calcular.module').then( m => m.CalcularPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,27 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
-  public precoGasolina: number;
-  public precoAlcool: number;
-  public resultado: string;
-  public resultado2: number;
-  private porcentagemConta = 0.7;
+  constructor(private nav: NavController) {}
 
-  constructor() {}
+  ngOnInit() {
+  }
 
-  public calcular() {
-    if (
-      this.precoAlcool/this.precoGasolina < this.porcentagemConta
-    ) {
-      this.resultado = 'Abasteça com álcool!';
-    } else {
-      this.resultado = 'Abasteça com gasolina!';
-    };
+  abrirCalcular() {
+    this.nav.navigateForward('calcular');
   }
 }
