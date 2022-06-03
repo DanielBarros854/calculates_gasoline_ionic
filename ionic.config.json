@@ -1,0 +1,7 @@
+{
+  "name": "calculo_gasosa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

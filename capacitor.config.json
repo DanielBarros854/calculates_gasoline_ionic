@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "calculo_gasosa",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
